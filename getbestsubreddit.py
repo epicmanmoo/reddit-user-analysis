@@ -6,33 +6,36 @@ from html.parser import HTMLParser
 import random
 
 top_25 = []
+conn = None
+cursor = None
 
 
 class BestSub:
     def __init__(self):
+        global conn, cursor
         with open("DBCredentials.txt") as db_stuff:
             db_credentials = db_stuff.readlines()
+            # needed to strip newline character because format of file was weird
             db_name = db_credentials[0].strip("\n")
             db_pass = db_credentials[1].strip("\n")
             db_host = db_credentials[2].strip("\n")
             db_port = db_credentials[3].strip("\n")
-        try:
             conn = psycopg2.connect(database=db_name,
                                     user=db_name,
                                     password=db_pass,
                                     host=db_host,
                                     port=db_port)
             cursor = conn.cursor()
-            print(conn.get_dsn_parameters(), "\n")
-            cursor.execute("SELECT version();")
-            record = cursor.fetchone()
-            print("Connected to", record, "\n")
-        except(Exception, psycopg2.Error) as error:
-            print("Error", error)
-        finally:
-            if conn:
-                cursor.close()
-                conn.close()
+            command = (
+                # """
+                #     CREATE TABLE POPULAR_SUBREDDITS (
+                #         sub_name VARCHAR(20) PRIMARY KEY,
+                #         sub_users INTEGER NOT NULL
+                #     )
+                # """
+            )
+            # cursor.execute(command)
+            conn.commit()
 
     # noinspection PyMethodMayBeStatic
     def get_best(self):
@@ -57,8 +60,15 @@ class BestSub:
         parser = MyHTMLParser()
         parser.feed(str(popular_subs))
         rand_num = random.randint(0, 24)
-        random_top = top_25[rand_num]  # Add this random to DB.
-        # print(random_top)
+        random_top = top_25[rand_num]
+        command = (
+            """
+                INSERT INTO POPULAR_SUBREDDITS(sub_name, sub_users) VALUES (%s, %s)
+            """
+        )
+        to_insert = (random_top, 123)
+        cursor.execute(command, to_insert)
+        conn.commit()
 
 
 class MyHTMLParser(HTMLParser, ABC):
@@ -70,4 +80,6 @@ class MyHTMLParser(HTMLParser, ABC):
 
 # just testing functionality
 bs = BestSub()
-# bs.get_best()
+bs.get_best()
+cursor.close()
+conn.close()
