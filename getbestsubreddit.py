@@ -87,7 +87,7 @@ class BestSub:
 
         try:
             cursor.execute(command, to_insert)
-        except Exception as e:
+        except Exception:
             return False
         conn.commit()
         return True
