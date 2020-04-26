@@ -4,15 +4,29 @@ from bs4 import BeautifulSoup
 import requests
 from html.parser import HTMLParser
 import random
+import praw
 
 top_25 = []
 conn = None
 cursor = None
+r = None
 
 
 class BestSub:
     def __init__(self):
-        global conn, cursor
+        global conn, cursor, r
+        with open("RedditCredentials.txt") as red_info:
+            red_credentials = red_info.readlines()
+            red_client_id = red_credentials[0].strip("\n")
+            red_client_secret = red_credentials[1].strip("\n")
+            red_client_user = red_credentials[2].strip("\n")
+            red_client_pass = red_credentials[3].strip("\n")
+            red_user_agent = red_credentials[4].strip("\n")
+            r = praw.Reddit(client_id=red_client_id,
+                            client_secret=red_client_secret,
+                            username=red_client_user,
+                            password=red_client_pass,
+                            user_agent=red_user_agent)
         with open("DBCredentials.txt") as db_stuff:
             db_credentials = db_stuff.readlines()
             # needed to strip newline character because format of file was weird
@@ -66,9 +80,17 @@ class BestSub:
                 INSERT INTO POPULAR_SUBREDDITS(sub_name, sub_users) VALUES (%s, %s)
             """
         )
-        to_insert = (random_top, 123)
-        cursor.execute(command, to_insert)
+        sub_name = str(random_top)[3:len(random_top) - 1]
+        subreddit = r.subreddit(sub_name)
+        num_subs = subreddit.subscribers
+        to_insert = (random_top, num_subs)
+
+        try:
+            cursor.execute(command, to_insert)
+        except Exception as e:
+            return False
         conn.commit()
+        return True
 
 
 class MyHTMLParser(HTMLParser, ABC):
@@ -80,6 +102,8 @@ class MyHTMLParser(HTMLParser, ABC):
 
 # just testing functionality
 bs = BestSub()
-bs.get_best()
+is_inserted = bs.get_best()
+while not is_inserted:
+    bs.get_best()
 cursor.close()
 conn.close()
