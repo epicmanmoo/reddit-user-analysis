@@ -15,7 +15,7 @@ r = None
 class BestSub:
     def __init__(self):
         global conn, cursor, r
-        with open("RedditCredentials.txt") as red_info:
+        with open("../RedditCredentials.txt") as red_info:
             red_credentials = red_info.readlines()
             red_client_id = red_credentials[0].strip("\n")
             red_client_secret = red_credentials[1].strip("\n")
@@ -27,7 +27,7 @@ class BestSub:
                             username=red_client_user,
                             password=red_client_pass,
                             user_agent=red_user_agent)
-        with open("DBCredentials.txt") as db_stuff:
+        with open("../DBCredentials.txt") as db_stuff:
             db_credentials = db_stuff.readlines()
             # needed to strip newline character because format of file was weird
             db_name = db_credentials[0].strip("\n")
@@ -40,16 +40,17 @@ class BestSub:
                                     host=db_host,
                                     port=db_port)
             cursor = conn.cursor()
-            command = (
-                # """
-                #     CREATE TABLE POPULAR_SUBREDDITS (
-                #         sub_name VARCHAR(20) PRIMARY KEY,
-                #         sub_users INTEGER NOT NULL
-                #     )
-                # """
-            )
+            # command = (
+            #     """
+            #         CREATE TABLE POPULAR_SUBREDDITS (
+            #             sub_name VARCHAR(20) PRIMARY KEY,
+            #             sub_users INTEGER NOT NULL
+            #             CHECK COUNT(sub_name) <= 25
+            #         )
+            #     """
+            # )
             # cursor.execute(command)
-            conn.commit()
+            # conn.commit()
 
     # noinspection PyMethodMayBeStatic
     def get_best(self):
@@ -77,7 +78,7 @@ class BestSub:
         random_top = top_25[rand_num]
         command = (
             """
-                INSERT INTO POPULAR_SUBREDDITS(sub_name, sub_users) VALUES (%s, %s)
+                INSERT INTO POPULAR_SUBREDDITS VALUES (%s, %s)
             """
         )
         sub_name = str(random_top)[3:len(random_top) - 1]
@@ -91,18 +92,21 @@ class BestSub:
         conn.commit()
         return True
 
+    # noinspection PyMethodMayBeStatic
+    def red_inst(self):
+        return r
+
+    # noinspection PyMethodMayBeStatic
+    def get_conn(self):
+        return conn
+
+    # noinspection PyMethodMayBeStatic
+    def get_cursor(self):
+        return cursor
+
 
 class MyHTMLParser(HTMLParser, ABC):
     def handle_starttag(self, tag, attrs):
         for attr in attrs:
             if "/r/" in attr[1]:
                 top_25.append(attr[1])
-
-
-# just testing functionality
-bs = BestSub()
-is_inserted = bs.get_best()
-while not is_inserted:
-    bs.get_best()
-cursor.close()
-conn.close()
