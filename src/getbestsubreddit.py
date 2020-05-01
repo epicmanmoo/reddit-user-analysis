@@ -83,8 +83,7 @@ class BestSub:
         sub_name = str(random_top)[3:len(random_top) - 1]
         subreddit = r.subreddit(sub_name)
         num_subs = subreddit.subscribers
-        to_insert = (random_top, num_subs)
-
+        to_insert = (sub_name, num_subs)
         try:
             cursor.execute(command, to_insert)
         except Exception:
