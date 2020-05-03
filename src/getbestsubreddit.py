@@ -1,3 +1,4 @@
+import datetime
 from abc import ABC
 import psycopg2
 from bs4 import BeautifulSoup
@@ -5,6 +6,7 @@ import requests
 from html.parser import HTMLParser
 import random
 import praw
+import time
 
 top_25 = []
 conn = None
@@ -68,13 +70,14 @@ class BestSub:
         random_top = top_25[rand_num]
         command = (
             """
-                INSERT INTO POPULAR_SUBREDDITS VALUES (%s, %s)
+                INSERT INTO POPULAR_SUBREDDITS VALUES (%s, %s, %s);
             """
         )
         sub_name = str(random_top)[3:len(random_top) - 1]
         subreddit = r.subreddit(sub_name)
         num_subs = subreddit.subscribers
-        to_insert = (sub_name, num_subs)
+        curr_time = time.mktime(datetime.datetime.now().timetuple())
+        to_insert = (sub_name, num_subs, curr_time)
         try:
             cursor.execute(command, to_insert)
         except Exception:

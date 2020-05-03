@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="90db1af2-eeae-457a-a2af-ca9c529fdf81" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getTopPostFromBestSub.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTopPostFromBestSub.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/getbestsubreddit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getbestsubreddit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +25,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
@@ -119,26 +119,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="390" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1587854790955" />
+    <state x="321" y="77" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588492886132">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="321" y="77" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1588492886132" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1587966268706">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1587966268706" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1588479478576">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1588499588623">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588479478576" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1588479478576">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588499588623" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1588499588623">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588479478576" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1588479478576">
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588499588623" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1588499588623">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588479478576" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1588479478576">
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588499588623" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1588499588623">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588479478576" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588499588623" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1588365747339">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
