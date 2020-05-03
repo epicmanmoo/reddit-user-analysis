@@ -30,27 +30,17 @@ class BestSub:
         with open("../DBCredentials.txt") as db_stuff:
             db_credentials = db_stuff.readlines()
             # needed to strip newline character because format of file was weird
-            db_name = db_credentials[0].strip("\n")
-            db_pass = db_credentials[1].strip("\n")
-            db_host = db_credentials[2].strip("\n")
-            db_port = db_credentials[3].strip("\n")
-            conn = psycopg2.connect(database=db_name,
+            db_db_name = db_credentials[0].strip("\n")
+            db_name = db_credentials[1].strip("\n")
+            db_pass = db_credentials[2].strip("\n")
+            db_host = db_credentials[3].strip("\n")
+            db_port = db_credentials[4].strip("\n")
+            conn = psycopg2.connect(database=db_db_name,
                                     user=db_name,
                                     password=db_pass,
                                     host=db_host,
                                     port=db_port)
             cursor = conn.cursor()
-            # command = (
-            #     """
-            #         CREATE TABLE POPULAR_SUBREDDITS (
-            #             sub_name VARCHAR(20) PRIMARY KEY,
-            #             sub_users INTEGER NOT NULL
-            #             CHECK COUNT(sub_name) <= 25
-            #         )
-            #     """
-            # )
-            # cursor.execute(command)
-            # conn.commit()
 
     # noinspection PyMethodMayBeStatic
     def get_best(self):
