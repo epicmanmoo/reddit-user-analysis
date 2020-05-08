@@ -17,9 +17,12 @@ comment_author_id = ""
 comment_body = ""
 subreddit_name = ""
 
-# insert into reddit_user and user_comment.
-
-post.comments.replace_more(limit=None)
-for comment in post.comments.list():
+post.comment_sort = 'controversial'
+for comment in post.comments:
     if comment.controversiality == 1:
-        break
+        if comment.body != "[removed]":
+            print(comment.body, '\n', comment.score)
+            break
+
+conn.close()
+cursor.close()
