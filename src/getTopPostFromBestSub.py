@@ -33,16 +33,15 @@ top_post = list(post)[0]
 # post_author_p_karma = top_post.author.link_karma
 # command = (
 #     """
-#         INSERT INTO reddit_user VALUES(%s, %s, %s, %s);
+#         INSERT INTO reddit_user VALUES(%s, %s, %s, %s, false);
 #     """
 # )
 # to_insert = (post_author_id, post_author_username, post_author_c_karma, post_author_p_karma)
 # cursor.execute(command, to_insert)
 # conn.commit()
 
-# side note for future reference: if comment_id ends up being null then ignore it. all it
-# means is that the tuple contains info about the poster on the ORIGINAL subreddit that
-# we are looking at, is is not that useful.
+# side note for future reference: is_chosen just means if the specified user
+# is the one who will be analyzed against different users based on the comments.
 
 # ----------------------------------------------------------------------------
 # add post
