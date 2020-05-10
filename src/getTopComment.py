@@ -57,5 +57,5 @@ for comment in post.comments:
 # cursor.execute(command, to_insert)
 # conn.commit()
 
-conn.close()
 cursor.close()
+conn.close()

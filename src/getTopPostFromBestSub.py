@@ -74,5 +74,5 @@ top_post = list(post)[0]
 # cursor.execute(command, to_insert)
 # conn.commit()
 #
-# conn.close()
 # cursor.close()
+# conn.close()

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90db1af2-eeae-457a-a2af-ca9c529fdf81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/getTop10Comments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/.idea/src.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getTop10Comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTop10Comments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/getTopComment.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTopComment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/getTopPostFromBestSub.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTopPostFromBestSub.py" afterDir="false" />
     </list>
@@ -32,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/;)" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -48,7 +49,28 @@
       <recent name="D:\CSS475\475Project\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.getTopComment">
+  <component name="RunManager" selected="Python.getTop10Comments">
+    <configuration name="getTop10Comments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="475Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/getTop10Comments.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="getTopComment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="475Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,6 +136,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.getTop10Comments" />
         <item itemvalue="Python.getTopComment" />
         <item itemvalue="Python.getTopPostFromBestSub" />
         <item itemvalue="Python.getbestsubreddit" />
@@ -142,37 +165,41 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="390" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1587854790955" />
-    <state x="321" y="77" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588492886132">
+    <state x="321" y="77" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1589067454520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="321" y="77" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1588492886132" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1589006440851">
+    <state x="321" y="77" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1589067454520" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1589073674028">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1589006440851" />
-    <state width="1259" height="138" key="GridCell.Tab.0.bottom" timestamp="1589012027477">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1589073674028" />
+    <state width="1259" height="138" key="GridCell.Tab.0.bottom" timestamp="1589088684953">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589012027477" />
-    <state width="1259" height="138" key="GridCell.Tab.0.center" timestamp="1589012027477">
+    <state width="1259" height="138" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589088684953" />
+    <state width="1259" height="138" key="GridCell.Tab.0.center" timestamp="1589088684953">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589012027477" />
-    <state width="1259" height="138" key="GridCell.Tab.0.left" timestamp="1589012027477">
+    <state width="1259" height="138" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589088684953" />
+    <state width="1259" height="138" key="GridCell.Tab.0.left" timestamp="1589088684953">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589012027477" />
-    <state width="1259" height="138" key="GridCell.Tab.0.right" timestamp="1589012027477">
+    <state width="1259" height="138" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589088684953" />
+    <state width="1259" height="138" key="GridCell.Tab.0.right" timestamp="1589088684953">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589012027477" />
+    <state width="1259" height="138" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589088684953" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1588935959520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1588935959520" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1588365747339">
+    <state x="450" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589080215228">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1588365747339" />
+    <state x="450" y="255" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1589080215228" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1589076859654">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1589076859654" />
   </component>
 </project>
