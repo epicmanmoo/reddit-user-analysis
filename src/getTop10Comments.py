@@ -36,7 +36,7 @@ for comment in user.comments.hot(limit=50):
         valid_post_ids_list.append(comment.submission.id)
         valid_comment_ids_list.append(comment.id)
 
-if len(valid_post_ids_list) == 0:
+if len(valid_post_ids_list) == 0 or len(valid_post_ids_list) < 5:
     print("RE-PICK USER")
 else:
     if len(valid_post_ids_list) > 5:
@@ -89,6 +89,7 @@ else:
         #     to_insert = (post_id.subreddit.id, str(list(r.info(['t5_' + post_id.subreddit.id]))[0]), post_id.author.id)
         #     cursor.execute(command, to_insert)
         #     conn.commit()
+        #     conn.rollback()
         # except Exception:
         #     continue
 

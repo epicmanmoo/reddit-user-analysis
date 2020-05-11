@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90db1af2-eeae-457a-a2af-ca9c529fdf81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/getSimilarComments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/getTop10Comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTop10Comments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getTopComment.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTopComment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getTopPostFromBestSub.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTopPostFromBestSub.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,28 @@
       <recent name="D:\CSS475\475Project\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.getTop10Comments">
+  <component name="RunManager" selected="Python.getSimilarComments">
+    <configuration name="getSimilarComments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="475Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/getSimilarComments.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="getTop10Comments" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="475Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,6 +155,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.getSimilarComments" />
         <item itemvalue="Python.getTop10Comments" />
         <item itemvalue="Python.getTopComment" />
         <item itemvalue="Python.getTopPostFromBestSub" />
@@ -173,22 +193,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1589073674028" />
-    <state width="1259" height="138" key="GridCell.Tab.0.bottom" timestamp="1589088684953">
+    <state width="1259" height="138" key="GridCell.Tab.0.bottom" timestamp="1589188486192">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589088684953" />
-    <state width="1259" height="138" key="GridCell.Tab.0.center" timestamp="1589088684953">
+    <state width="1259" height="138" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589188486192" />
+    <state width="1259" height="138" key="GridCell.Tab.0.center" timestamp="1589188486192">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589088684953" />
-    <state width="1259" height="138" key="GridCell.Tab.0.left" timestamp="1589088684953">
+    <state width="1259" height="138" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589188486192" />
+    <state width="1259" height="138" key="GridCell.Tab.0.left" timestamp="1589188486192">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589088684953" />
-    <state width="1259" height="138" key="GridCell.Tab.0.right" timestamp="1589088684953">
+    <state width="1259" height="138" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589188486192" />
+    <state width="1259" height="138" key="GridCell.Tab.0.right" timestamp="1589188486192">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589088684953" />
+    <state width="1259" height="138" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589188486192" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1588935959520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
