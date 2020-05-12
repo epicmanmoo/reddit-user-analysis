@@ -11,7 +11,7 @@ command = (
         SELECT top_comment_id, post_id FROM user_top_comments;
     """
 )
-for i in range(0, 5):
+for i in range(5, 10):
     cursor.execute(command)
     conn.commit()
     comm = r.comment(cursor.fetchall()[i][0])
@@ -24,24 +24,34 @@ for i in range(0, 5):
         if comment.id != comm.id:
             ratio = (fuzz.token_set_ratio(str(comm.body).lower(), str(comment.body).lower()))
             if ratio >= 60:
-                # ins_command = (
+
+                # red_ins_command = (
                 #     """
                 #         INSERT INTO reddit_user VALUES(%s, %s, %s, %s, false);
                 #     """
                 # )
-                ins_command = (
+
+                sim_comm_ins_command = (
                     """
                         INSERT INTO similar_comments VALUES(%s, %s, %s, %s, %s, %s)
                     """
                 )
+
+                # try:
+                #     red_to_insert = (red_comment.author.id, str(red_comment.author), red_comment.author.comment_karma, red_comment.author.link_karma)
+                #     cursor.execute(red_ins_command, red_to_insert)
+                #     conn.commit()
+                # except Exception:
+                #     conn.rollback()
+                #     continue
+
                 try:
-                    # to_insert = (red_comment.author.id, str(red_comment.author), red_comment.author.comment_karma, red_comment.author.link_karma)
-                    to_insert = (red_comment.id.id, str(ratio), red_comment.author.id, comm.author.id, post.id, str(comment.body))
-                    print(to_insert)
-                    cursor.execute(ins_command, to_insert)
+                    sim_comm_to_insert = (red_comment.id.id, str(ratio), red_comment.author.id, comm.author.id, post.id, str(comment.body))
+                    cursor.execute(sim_comm_ins_command, sim_comm_to_insert)
                     conn.commit()
                 except Exception:
                     conn.rollback()
                     continue
+
 cursor.close()
 conn.close()

@@ -10,7 +10,7 @@ command = (
     """
 )
 cursor.execute(command)
-post_id = cursor.fetchone()[0]
+post_id = cursor.fetchall()[6][0]
 post = r.submission(id=post_id)
 comment_id = ""
 comment_author_id = ""
@@ -36,26 +36,26 @@ for comment in post.comments:
 # ---------------------------------------------------------
 # add new user
 
-# command = (
-#     """
-#         INSERT INTO reddit_user VALUES(%s, %s, %s, %s, true);
-#     """
-# )
-# to_insert = (comment_author_id, str(comment_author), author_comment_karma, author_link_karma)
-# cursor.execute(command, to_insert)
-# conn.commit()
+command = (
+    """
+        INSERT INTO reddit_user VALUES(%s, %s, %s, %s, true);
+    """
+)
+to_insert = (comment_author_id, str(comment_author), author_comment_karma, author_link_karma)
+cursor.execute(command, to_insert)
+conn.commit()
 
 # -------------------------------------------------------------------------------------
 # inserts into comment
 
-# command = (
-#     """
-#         INSERT INTO user_comment VALUES(%s, %s, %s, %s, %s);
-#     """
-# )
-# to_insert = (comment_id, post_id, subreddit_name, comment_body, comment_author_id)
-# cursor.execute(command, to_insert)
-# conn.commit()
+command = (
+    """
+        INSERT INTO user_comment VALUES(%s, %s, %s, %s, %s);
+    """
+)
+to_insert = (comment_id, post_id, subreddit_name, comment_body, comment_author_id)
+cursor.execute(command, to_insert)
+conn.commit()
 
 cursor.close()
 conn.close()
