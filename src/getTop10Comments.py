@@ -40,8 +40,8 @@ if len(valid_post_ids_list) == 0 or len(valid_post_ids_list) < 5:
     print("RE-PICK USER")
 else:
     if len(valid_post_ids_list) > 5:
-        del valid_post_ids_list[6:]
-        del valid_comment_ids_list[6:]
+        del valid_post_ids_list[5:]
+        del valid_comment_ids_list[5:]
 
     # red_command = (
     #     """
