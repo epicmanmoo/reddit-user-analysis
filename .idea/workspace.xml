@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90db1af2-eeae-457a-a2af-ca9c529fdf81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/getTotalComments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getSimilarComments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getSimilarComments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/getTop10Comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTop10Comments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getTopComment.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTopComment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getTopPostFromBestSub.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTopPostFromBestSub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getTotalComments.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getTotalComments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getbestsubreddit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/getbestsubreddit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,22 +197,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1589073674028" />
-    <state width="1259" height="138" key="GridCell.Tab.0.bottom" timestamp="1589275800131">
+    <state width="1259" height="138" key="GridCell.Tab.0.bottom" timestamp="1590201904735">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1589275800131" />
-    <state width="1259" height="138" key="GridCell.Tab.0.center" timestamp="1589275800131">
+    <state width="1259" height="138" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1590201904735" />
+    <state width="1259" height="138" key="GridCell.Tab.0.center" timestamp="1590201904735">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1589275800131" />
-    <state width="1259" height="138" key="GridCell.Tab.0.left" timestamp="1589275800130">
+    <state width="1259" height="138" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1590201904735" />
+    <state width="1259" height="138" key="GridCell.Tab.0.left" timestamp="1590201904735">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1589275800130" />
-    <state width="1259" height="138" key="GridCell.Tab.0.right" timestamp="1589275800131">
+    <state width="1259" height="138" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1590201904735" />
+    <state width="1259" height="138" key="GridCell.Tab.0.right" timestamp="1590201904735">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="138" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1589275800131" />
+    <state width="1259" height="138" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1590201904735" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1588935959520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -221,5 +225,8 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1589076859654" />
+  </component>
+  <component name="discordPresenceActive">
+    <option name="active" value="false" />
   </component>
 </project>

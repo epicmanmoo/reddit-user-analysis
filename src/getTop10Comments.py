@@ -15,8 +15,8 @@ def check_exists(submission_id):
         """
     )
     cursor.execute(check_command)
-    post_id = cursor.fetchone()
-    for sub_id in post_id:
+    pos_id = cursor.fetchone()
+    for sub_id in pos_id:
         if sub_id == submission_id:
             return False
     return True
@@ -28,7 +28,7 @@ command = (
     """
 )
 cursor.execute(command)
-username = cursor.fetchall()[1][0]
+username = cursor.fetchall()[4][0]
 user = r.redditor(username)
 for comment in user.comments.hot(limit=50):
     if comment.submission.id not in valid_post_ids_list and check_exists(
@@ -49,15 +49,15 @@ else:
     #     """
     # )
 
-    # post_command = (
-    #     """
-    #         INSERT INTO post VALUES(%s, %s, %s, %s, %s);
-    #     """
-    # )
-
     # sub_command = (
     #     """
     #         INSERT INTO subreddit VALUES(%s, %s, %s);
+    #     """
+    # )
+
+    # post_command = (
+    #     """
+    #         INSERT INTO post VALUES(%s, %s, %s, %s, %s, NULL);
     #     """
     # )
 
@@ -84,17 +84,17 @@ else:
         #     conn.rollback()
         #     continue
 
-        # post_to_insert = (id_of_post, post_id.title, post_id.is_self, post_id.subreddit.id, post_id.author.id)
+        # sub_to_insert = (post_id.subreddit.id, str(list(r.info(['t5_' + post_id.subreddit.id]))[0]), post_id.author.id)
         # try:
-        #     cursor.execute(post_command, post_to_insert)
+        #     cursor.execute(sub_command, sub_to_insert)
         #     conn.commit()
         # except Exception:
         #     conn.rollback()
         #     continue
 
-        # sub_to_insert = (post_id.subreddit.id, str(list(r.info(['t5_' + post_id.subreddit.id]))[0]), post_id.author.id)
+        # post_to_insert = (id_of_post, post_id.title, post_id.is_self, post_id.subreddit.id, post_id.author.id)
         # try:
-        #     cursor.execute(sub_command, sub_to_insert)
+        #     cursor.execute(post_command, post_to_insert)
         #     conn.commit()
         # except Exception:
         #     conn.rollback()

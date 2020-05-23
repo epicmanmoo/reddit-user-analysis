@@ -98,6 +98,8 @@ class BestSub:
         return cursor
 
 
+# just for the sake of getting top 25 trending for the day
+
 class MyHTMLParser(HTMLParser, ABC):
     def handle_starttag(self, tag, attrs):
         for attr in attrs:
