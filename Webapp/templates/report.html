@@ -22,7 +22,7 @@
             </tbody>
         </table>
 
-        <h5>Posts {{ userName }} had recently commented on during the time on analysis</h5>
+        <h5>Posts {{ userName }} had recently commented on during the time of analysis</h5>
         <table class="table table-dark">
             <thead>
                 <tr>
@@ -41,7 +41,7 @@
         </table>
 
         <br>
-        <h5>Subreddits {{ userName }} has posted their 5 most popular comments in </h5>
+        <h5>Subreddits {{ userName }} had posted their 5 most popular comments in </h5>
         <ul class="list-group">
                 {% for key, value in topCommentDistribution.items() %}
                     <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -52,18 +52,18 @@
         </ul>
 
         <br>
-        <h5>Pie Chart of Percentage of Subreddits {{ userName }} Has Top Comments In That are Top Subreddits</h5>
+        <h5>Pie Chart of Percentage of Subreddits {{ userName }} Had Top Comments In That were Top Subreddits</h5>
         <img style="  display: block; margin-left: auto; margin-right: auto; width: 50%;" src="data:image/png;base64,{{ pieChart }}">
 
         <br>
-        <h5>Box Plot of Similarity</h5>
+        <h5>Box Plot of Similarity of Comments Similar to {{ userName }}'s Top Comments</h5>
         <img style="  display: block; margin-left: auto; margin-right: auto; width: 50%;" src="data:image/png;base64,{{ boxplot }}">
 
         <br>
         <br>
-        <h5><a href = "https://mode.com/blog/violin-plot-examples/">Violin Plot</a> of Similarity</h5>
+        <h5><a href = "https://mode.com/blog/violin-plot-examples/">Violin Plot</a> of Similarity of Comments Similar
+            to {{ userName }}'s Top Comments</h5>
         <img style="  display: block; margin-left: auto; margin-right: auto; width: 50%;" src="data:image/png;base64,{{ violinplot }}">
-
 
 
     </div>

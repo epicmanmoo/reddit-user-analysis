@@ -51,10 +51,11 @@ def queryauth():
 @app.route('/queryzone')
 def queryzone():
     input = request.args.get('password')
+    requery = request.args.get('requery')
 
     isCorrect = False
 
-    if input == password:
+    if input == password or len(requery) > 0:
         isCorrect = True
 
     return render_template("queryzone.html", isCorrect=isCorrect)
@@ -62,7 +63,36 @@ def queryzone():
 # QUERY RESULTS PAGE
 @app.route('/queryResults')
 def queryresults():
-    return render_template('results.html')
+    userQuery = request.args.get('userquery')
+    columnTitles = ""
+    tuplesReceived = ''
+    tuples = []
+    titles = []
+    validQuery = ''
+
+    try:
+        tuplesReceived = con.execute(userQuery)
+
+        words = userQuery.split()
+
+        if words[0].upper() not in ('INSERT', 'UPDATE', 'DELETE'):
+            for tuple in tuplesReceived:
+                tuples.append(tuple)
+
+            columnTitles = con.execute(userQuery).keys()
+
+            for title in columnTitles:
+                titles.append(title)
+        validQuery = True
+    except:
+        validQuery = False
+
+    return render_template('results.html',
+                           tuplesReceived=tuples,
+                           numTuples = len(tuples),
+                           validQuery=validQuery,
+                           columnTitles=titles,
+                           numColumns = len(columnTitles))
 
 # REPORT PAGE
 @app.route('/report')
@@ -163,7 +193,7 @@ def report():
     ax.set_title('Distribution of Similarity Percentages (Boxplot)')
     ax.yaxis.grid(True)
     ax.set_xlabel('User Analyzed')
-    ax.set_ylabel('Degree of Similarity')
+    ax.set_ylabel('Degree of Similarity(%)')
     plt.setp(bp['boxes'], facecolor='lightgreen')
 
 
