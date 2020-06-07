@@ -55,7 +55,7 @@ def queryzone():
 
     isCorrect = False
 
-    if input == password or len(requery) > 0:
+    if input == password or requery != None:
         isCorrect = True
 
     return render_template("queryzone.html", isCorrect=isCorrect)
