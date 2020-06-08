@@ -9,7 +9,7 @@
 Necessary components:
   1. You must have access to a database (whether it's local or hosted on AWS/Azure).
   2. You should have an IDE/text editor that can run python.
-  3. You must have a Reddit account. You can make one which is free. Once you do that, visit www.old.reddit.com/prefs and click the        button on the page that says 'apps'. Next, create an application by clicking the "are you a developer? create an app" button. Give your application a name and select script from the 3 boxes. Give it a short              description and have the about url/redirect url be anything you want. This could be anything (in our case it was the link to the            website). ![Picture](https://i.ibb.co/f9xyM4S/Capture.png). Once you click create app, take note of the personal use script at the          code at the top along with the secret code. You will need these for PRAW. 
+  3. You must have a Reddit account. You can make one which is free. Once you do that, visit https://old.reddit.com/prefs and click the        button on the page that says 'apps'. Next, create an application by clicking the "are you a developer? create an app" button. Give your application a name and select script from the 3 boxes. Give it a short              description and have the about url/redirect url be anything you want. This could be anything (in our case it was the link to the            website). ![Picture](https://i.ibb.co/f9xyM4S/Capture.png). Once you click create app, take note of the personal use script at the          code at the top along with the secret code. You will need these for PRAW. 
   
   
 ![Picture](https://i.ibb.co/pfDnNMn/Capture.png) 
