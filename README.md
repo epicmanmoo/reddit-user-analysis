@@ -15,6 +15,7 @@ Necessary components:
 ![Picture](https://i.ibb.co/pfDnNMn/Capture.png) 
 
 Above, you should see your specific tokens. Take note of the smaller one (on top) and the longer token below it.
+
 (I deleted this app don't worry!)
 
 
