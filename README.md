@@ -20,7 +20,7 @@
 ## Data Insertion
 Necessary components:
   1. You must have a Reddit account. You can make one for free by visiting Reddit. 
-  2. You must have access to a database (whether it's local or hosted on AWS/Azure or any other server, we chose ElephantSQL).
+  2. You must have access to a database (the database can be hosted either locally or hosted on AWS/Azure or any other Postgres hosting service, we chose ElephantSQL).
   3. You should have an IDE/text editor that can run python.
   
 Once you do the above steps, visit https://old.reddit.com/prefs and click the        button on the page that says 'apps'. Next, create an application by clicking the "are you a developer? create an app" button. Give your application a name and select script from the 3 boxes. Give it a short              description and have the about url/redirect url be anything you want. This could be anything (in our case it was the link to the            website). ![Picture](https://i.ibb.co/f9xyM4S/Capture.png).
