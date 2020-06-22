@@ -19,7 +19,7 @@
 # How to Use
 ## Data Insertion
 Necessary components:
-  1. You must have a Reddit account. You can make one which is free by visiting Reddit. 
+  1. You must have a Reddit account. You can make one for free by visiting Reddit. 
   2. You must have access to a database (whether it's local or hosted on AWS/Azure or any other server, we chose ElephantSQL).
   3. You should have an IDE/text editor that can run python.
   
