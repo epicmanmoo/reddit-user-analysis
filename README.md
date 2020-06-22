@@ -28,4 +28,4 @@ Method 1: Open www.redditor.tk
 Method 2:
 1. Download project using git or zip file
 2. Open up app.py on an IDE/text editor that can run Python/Flask apps
-3. Press run and go to the local ip listed on the console 
+3. Press run and go to the local IP listed on the console 
