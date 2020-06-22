@@ -2,7 +2,18 @@
 # www.redditor.tk
 ## Data Sourcing Backend Scripts/DB creation: Mooaz Nasir
 ## Flask Webapp, Frontend queries/Data Visualizations: Utsav Goswami
-## Tech Stack: Python, Flask, PRAW, PostgreSQL, Matplotlib, HTML, CSS, Jinja, Bootstrap, Heroku, ElephantSQL
+## Tech Stack
+ - Python
+ - Flask
+ - PRAW
+ - PostgreSQL
+ - Matplotlib 
+ - HTML 
+ - CSS 
+ - Jinja
+ - Bootstrap
+ - Heroku 
+ - ElephantSQL
 ## Analyzes user behavior and how similar comments are on certain posts on the social media platform Reddit. Database used is PostgreSQL and data stored on a server using ElephantSQL.
 
 # How to Use
