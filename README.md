@@ -2,7 +2,7 @@
 # www.redditor.tk
 ## Data Sourcing Backend Scripts/DB creation: Mooaz Nasir
 ## Flask Webapp, Queries/Data Visualizations: Utsav Goswami
-## Tech Stack
+## Technologies Used
  - Python
  - Flask
  - PRAW
