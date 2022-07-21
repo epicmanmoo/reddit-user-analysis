@@ -24,13 +24,6 @@ engine = create_engine(path)
 
 con = engine.connect()
 
-# app.config['SQLALCHEMY_DATABASE_URI'] = path
-#
-# engine = SQLAlchemy.create_engine(path)
-# con = engine.connect()
-
-# db = SQLAlchemy(app)
-
 # HOME PAGE
 @app.route('/')
 def index():
@@ -229,11 +222,6 @@ def report():
 
     for tuple in recentInteractedPosts:
         posts[tuple[0]] = tuple[1]
-
-
-
-
-
 
     return render_template('report.html',
                            userName=userName,
